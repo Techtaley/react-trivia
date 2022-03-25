@@ -21,8 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-/src/Jenkinsfile
 /package-lock.json
 SRS
 .env
