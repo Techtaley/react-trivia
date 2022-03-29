@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "react-trivia/hidden/Home.tsx", "react-trivia/hidden/App_brower-router.tsx", "react-trivia/deleted/Trivia_issues_to_fix.tsx", "react-trivia/deleted/Home_browser_router.tsx"  ]
 }
