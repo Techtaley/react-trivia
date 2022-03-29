@@ -5,9 +5,16 @@
     font-weight: bold; 
 }
 
+
+main {
+    width: 500px;
+    margin: 50px auto;
+}
+
 .triviaQuiz {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 500px;
     padding: 30px;
