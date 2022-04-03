@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-trivia/static/css/main.f397a4eb.css",
-    "main.js": "/react-trivia/static/js/main.7cd174af.js",
+    "main.js": "/react-trivia/static/js/main.c866849a.js",
     "static/media/ski_background_1.jpg": "/react-trivia/static/media/ski_background_1.d32440a8ea4fa6148c38.jpg",
     "index.html": "/react-trivia/index.html",
     "main.f397a4eb.css.map": "/react-trivia/static/css/main.f397a4eb.css.map",
-    "main.7cd174af.js.map": "/react-trivia/static/js/main.7cd174af.js.map"
+    "main.c866849a.js.map": "/react-trivia/static/js/main.c866849a.js.map"
   },
   "entrypoints": [
     "static/css/main.f397a4eb.css",
-    "static/js/main.7cd174af.js"
+    "static/js/main.c866849a.js"
   ]
 }
