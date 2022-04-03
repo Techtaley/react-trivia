@@ -1,12 +1,11 @@
 import React from 'react'
 import Trivia from './pages/Trivia'
-import './style.css'
-
+import './styles/styles.css'
 
 const App: React.FC = () => {
   return (  
     <div className="App">
-      <Trivia />      
+      <Trivia /> 
     </div>      
   )
 }

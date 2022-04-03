@@ -1,0 +1,190 @@
+html,
+body {
+  height: 100%;
+  color: #000;
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url(/src/images/ski_background_1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+body a:link,
+body a:visited,
+body a:hover,
+body a:active {
+  text-decoration: none;
+  color: #000;
+}
+
+body * {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #f0eeed;
+}
+
+body * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body button {
+  color: #000;
+  font-size: 20px;
+  min-width: 150px;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/*screenName */
+.screenName_section .screenName_title {
+  font-size: 20px;
+}
+
+.screenName_section .screenName_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+  height: auto;
+}
+
+.screenName_section .screenName_form .screenName_label {
+  color: transparent;
+}
+
+.screenName_section .screenName_form .screenName_input {
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #000;
+}
+
+.triviaQuiz {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 500px;
+  padding: 30px;
+  margin: 50px auto;
+  border: 5px solid #f0eeed;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 10px #f0eeed;
+          box-shadow: 5px 10px #f0eeed;
+  height: auto;
+}
+
+.triviaQuiz .triviaQuiz_title {
+  font-size: 70px;
+}
+
+/* questions */
+.questions_section {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.questions_section .gameStats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 500px;
+  height: auto;
+}
+
+.questions_section .answerForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+}
+
+.questions_section .answerForm .answers {
+  /* display: flex;
+            flex-direction: column;
+            align-items: center; */
+}
+
+.questions_section .answerForm .answer {
+  min-width: 150px;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.right {
+  background-color: green;
+}
+
+.wrong {
+  background-color: red;
+}
+
+.hideStart {
+  display: none;
+}
+
+.nextQuestion {
+  width: 150px;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.gameover {
+  background-color: lightskyblue;
+}
+
+.remove {
+  display: none;
+}
+/*# sourceMappingURL=styles.css.map */

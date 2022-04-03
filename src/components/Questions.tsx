@@ -1,6 +1,4 @@
-import React from 'react'
-
-//explicit prop types
+//explicit types for incoming props 
 type Props = {
   questions: string[],
   question: string[], 
@@ -14,8 +12,7 @@ type Props = {
   setAnswerDisabled: any,
 }
 
-
-//rfce adjusted for typescript
+//rfce adjusted to include typescript
 const Questions: React.FC<Props> = ({
   questions,
   question, 
@@ -40,13 +37,13 @@ const Questions: React.FC<Props> = ({
   }
 
   return (        
-      <main>
+      <section className="questions_section">
         <div className="gameStats">
           <p className="questionNum">Questions: {questionNum + 1} / {total_questions}</p>  
           <p className="score">Score: {score} </p>  
         </div>       
 
-        <p data-testid="question" className="question">{question}</p>        
+        <p className="question">{question}</p>        
         
         <div className="answerForm">
             {answers.map(a => 
@@ -67,9 +64,7 @@ const Questions: React.FC<Props> = ({
             )}                         
         </div>  
         
-        <br/>
-        <br/>
-      </main>
+      </section>
     )
 }
 

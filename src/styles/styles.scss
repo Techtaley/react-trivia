@@ -1,0 +1,160 @@
+@import './variables.scss';
+
+html,
+body {
+    height: 100%;
+    color: $greyColor;
+    cursor: pointer;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+        text-decoration: none;
+        color: $greyColor;
+    }
+
+    * {
+        font-family: $fira;
+        font-size: $medium; 
+        font-weight: bold; 
+        color:$creamColor;
+    }
+
+    * {
+        box-sizing: border-box;
+    }  
+
+    background-image: url(/src/images/ski_background_1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    button {
+        color: $greyColor;
+        font-size: $medium;
+        min-width: 150px;
+        padding: 8px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }    
+}
+
+/*screenName */
+.screenName_section {
+    .screenName_title {
+        font-size: $medium;
+    }
+
+    .screenName_form {
+        @include flexDisplay(column, space-between, center);
+        margin-bottom: 20px;
+        height: auto;
+
+        .screenName_label {
+            color: transparent;
+        }
+
+        .screenName_input {
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: $medium;
+            color: $greyColor;
+        } 
+        
+        // .screenName_btn {
+        //     min-width: 150px;
+        //     padding: 8px;
+        //     border-radius: 5px;
+        //     margin-bottom: 20px;
+        // }
+    }
+}
+
+.triviaQuiz {
+    @include flexDisplay(column, center, center);
+    width: 500px;
+    padding: 30px;
+    margin: 50px auto;
+    border: 5px solid $creamColor;
+    border-radius: 15px;
+    box-shadow: 5px 10px $creamColor;
+    height: auto;
+
+    .triviaQuiz_title {
+        font-size: $large;
+    }
+}
+
+
+/* questions */
+.questions_section {
+    //@include flexDisplay(column, center, center);
+    max-width: 500px;
+    margin: 20px auto;
+
+    .gameStats {
+        @include flexDisplay(row, space-between, center);
+        max-width: 500px;
+        height: auto;
+    }
+    
+    .answerForm {
+        @include flexDisplay(column, space-around, center);
+        height: auto;
+        
+        .answers {
+            /* display: flex;
+            flex-direction: column;
+            align-items: center; */
+        }
+
+        .answer {
+            min-width: 150px;
+            padding: 8px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }           
+    }
+    
+}
+
+
+
+
+
+
+
+.right {
+    background-color: green;
+}
+
+.wrong {
+    background-color: red;
+}
+
+.hideStart {
+    display: none;
+}
+
+.nextQuestion {
+    width: 150px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.gameover {
+    background-color: lightskyblue;
+}
+
+.remove {
+    display: none;  
+}

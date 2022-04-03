@@ -1,0 +1,25 @@
+//colors
+$greyColor: #000;
+$creamColor: #f0eeed;
+
+//font-family
+$federo: 'Federo', sans-serif;
+$fira: 'Fira Sans', sans-serif; 
+
+//font-size
+$medium: 20px;
+$large: 70px;
+
+@mixin regularBtn() {
+    min-width: 150px;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+//type none if no value needed
+@mixin flexDisplay($direction, $justifyContent, $alignItems){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}

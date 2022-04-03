@@ -1,8 +1,9 @@
 import React, {useState, useEffect } from 'react'
 import he from 'he'
 import Questions from '../components/Questions'
+import ScreenName from '../components/ScreenName'
 
-//typescript: data coming from db
+//explicit typescript for data coming from db
 type Results = {
     correct_answer: string,
     incorrect_answers: string[]
@@ -31,6 +32,7 @@ type Results = {
 }
 
 export default function Trivia(){
+  const [screenName, setScreenName] = useState("")
   const [questions, setQuestions] = useState([])
   const [question, setQuestion] = useState([])
   const [questionNum, setQuestionNum] = useState(0)
@@ -102,7 +104,9 @@ export default function Trivia(){
     fetchQuestions() 
   }, [questionNum]) 
 
-  let startQuiz = async () => {
+  let handleSubmit = ( e: React.FormEvent<HTMLFormElement> ) => {
+    e.preventDefault()
+    
     setIsLoading(true)  
 
     setTimeout(() => {
@@ -113,6 +117,13 @@ export default function Trivia(){
       setQuestionNum(0)  
     }, 1000)
   }
+
+  let handleChange = ( e:any ) => {
+    //const { value } = e.target 
+    //setTimeout(() => {
+      setScreenName(e.target.value)  
+    //}, 1000)
+  } 
 
   let nextQuestion = () => {  
     setQuestionNum(questionNum => questionNum + 1)
@@ -132,52 +143,47 @@ export default function Trivia(){
   : gameStatus = ""
 
   return (    
-    <div className="triviaQuiz"> 
-       
-          { gameStart &&
-            <h1 className="triviaQuiz_title">Trivia Quiz</h1> 
-          } 
+    <div className="triviaQuiz">
+      { gameStart &&
+        <h1 className="triviaQuiz_title">Trivia Quiz</h1> 
+      } 
 
-          <h1 className="welcome">{ gameStatus }</h1> 
+      { gameOver &&  
+        <ScreenName
+          handleSubmit={handleSubmit}
+          screenName={screenName}
+          handleChange={handleChange}
+          gameStatus={gameStatus}
+        />           
+      }
+      
+      { !isLoading && !gameOver &&           
+          <Questions 
+            questions={questions}
+            question={question}
+            answers={answers}
+            correct={correct}
+            questionNum={questionNum} 
+            total_questions={TOTAL_QUESTIONS}
+            score={score}
+            setScore={setScore}
+            answerDisabled={answerDisabled}
+            setAnswerDisabled={setAnswerDisabled}
+          />
+      }
 
-          { gameOver  ? 
-            <button   
-              className="startQuiz " 
-              onClick={startQuiz} 
-            >
-              Start
-            </button>        
-            : null 
-          }
-
-          { !isLoading && !gameOver &&           
-            <Questions 
-              questions={questions}
-              question={question}
-              answers={answers}
-              correct={correct}
-              questionNum={questionNum} 
-              total_questions={TOTAL_QUESTIONS}
-              score={score}
-              setScore={setScore}
-              answerDisabled={answerDisabled}
-              setAnswerDisabled={setAnswerDisabled}
-            />
-          }
-
-          { !gameOver && !isLoading ?
-            <button 
-                data-testid="nextBtn"
-                className="nextQuestion" 
-                name="button" 
-                value="nextQuestion" 
-                onClick={nextQuestion}
-                disabled={nextDisabled}
-            >
-              Next Question
-            </button>   
-            : null 
-          }  
+      { !gameOver && !isLoading ?
+          <button 
+              className="nextQuestion" 
+              name="button" 
+              value="nextQuestion" 
+              onClick={nextQuestion}
+              disabled={nextDisabled}
+          >
+            Next Question
+          </button>   
+          : null 
+      }  
     </div>      
   )
 }
