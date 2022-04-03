@@ -123,6 +123,7 @@ export default function Trivia(){
     //setTimeout(() => {
       setScreenName(e.target.value)  
     //}, 1000)
+
   } 
 
   let nextQuestion = () => {  
@@ -132,7 +133,8 @@ export default function Trivia(){
 
     if (questionNum === questions.length - 1) {
       setGameOver(true)    
-      setIsLoading(false)
+      setIsLoading(false) 
+      setScreenName("")
     } 
   }
 
@@ -147,6 +149,12 @@ export default function Trivia(){
       { gameStart &&
         <h1 className="triviaQuiz_title">Trivia Quiz</h1> 
       } 
+
+      {!screenName &&           
+        <p className="screenName_title" id="screenName">Enter a screen name to begin</p>
+      }
+
+      { screenName && <p>Welcome {screenName}! </p> }
 
       { gameOver &&  
         <ScreenName

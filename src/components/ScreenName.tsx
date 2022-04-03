@@ -11,16 +11,10 @@ const ScreenName: React.FC<Props> = ({
     handleSubmit,
     screenName,
     handleChange,
-    gameStatus  
+    gameStatus,
 }) => {
     return (
         <section className="screenName_section">        
-            {!screenName &&           
-                <p className="screenName_title" id="screenName">Enter a screen name to begin</p>
-            }
-
-            { screenName && <p>Welcome {screenName}! </p> }
-
             <form className="screenName_form" onSubmit={handleSubmit}>
         
                 <label htmlFor="screenName_id" className="screenName_label">Screen Name</label>
